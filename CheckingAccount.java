@@ -44,14 +44,17 @@ public class CheckingAccount implements HasMenu{
 
 			else if (userChoice.equals("1")){
 				System.out.println("Please Hold Checking Balance...");
+				checkBalance();
 			}
 
 			else if (userChoice.equals("2")){
 				System.out.println("Making A Deposit! Got It!");
+				makeDeposit();
 			}
 
 			else if (userChoice.equals("3")){
 				System.out.println("Making A Withdrawal! Got It!");
+				makeWithdrawal();
 			}
 			
 			else {
@@ -90,5 +93,23 @@ public class CheckingAccount implements HasMenu{
 		}
 
 		return 0d;
+	}
+
+	public void makeDeposit(){
+		System.out.println("How much would you like to deposit?");
+		double deposit = getDouble();
+		this.balance += deposit;
+		String newBal = getBalanceString();
+		System.out.println("Ok! Your new balance is " + newBal);
+	}
+
+	public void makeWithdrawal(){
+		System.out.println("How much would you like to withdrawal?");
+		double withdrawal = getDouble();
+		
+		this.balance -= withdrawal;
+		
+		String newBal = getBalanceString();
+		System.out.println("Ok! Your new balance is " + newBal);
 	}
 }
