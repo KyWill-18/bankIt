@@ -25,4 +25,8 @@ public class Admin extend User{
 
 		return result;
 	}
+
+	public void start(){
+
+	}
 }
