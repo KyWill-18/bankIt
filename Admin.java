@@ -1,14 +1,15 @@
 import java.util.*;
 
-public class Admin extend User{
+public class Admin extends User implements HasMenu{
 
 	public static void main(String[] args){
 		Admin a = new Admin();
 		a.login();
 	}
 
+
 	public Admin(){
-		this.userName="admin";
+		this.userName = "admin";
 		this.PIN = "0000";
 	}
 
